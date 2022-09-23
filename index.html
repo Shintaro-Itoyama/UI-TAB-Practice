@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tab.css">
+
+  <title> Tab-UI-Develop</title>
+</head>
+<body>
+
+  <div class="tab" id="js-tab">
+    <div class="tab-nav">
+      <!--タブの上面-->
+      <!--htmlは便利で、data-xxxで任意のデータ属性を付けれる。-->
+      <a href="" class="tab-nav-item is-active" data-nav="0">Tab-0</a>
+      <a href="" class="tab-nav-item" data-nav="1">Tab-1</a>
+      <a href="" class="tab-nav-item" data-nav="2">Tab-2</a>
+    </div>
+    <div class="tab-contents">
+      <!--タブの内容-->
+      <div class="tab-contents-item" data-cont="0">タブその0</div>
+      <div class="tab-contents-item" data-cont="1">タブその1</div>
+      <div class="tab-contents-item" data-cont="2">タブその2</div>
+    </div>
+  </div>
+  
+  <!--JS読み込み-->
+  <script type="text/javascript" src="tab.js"></script>
+</body>
+</html>
