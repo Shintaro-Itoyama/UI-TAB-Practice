@@ -1,7 +1,8 @@
 @charset "UTH-8";
 
 .tab {
-  width: 500px;
+  /* width: 500px; */
+  width: 100%;
 }
 .tab-nav {
   display: flex;
@@ -9,10 +10,9 @@
 .tab-nav-item {
   background: #ccc;
   color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px 5px 0 0;/*左上と右上の角を丸くする。*/
-
+  padding: 10px 45px;
+  text-decoration:none;
+  border-radius: 5px 10px 0 0;/*左上と右上の角を丸くする。*/
   margin-right: 2px;
 }
 /*タブナビアイテムクラスに、イズアクティブクラスを設ける。*/
@@ -22,13 +22,14 @@
   color: #fff;
 }
 
-
-
-
 .tab-contents {
+  width: 700px;
+  height: 40px;
   border: 1px solid #ccc;
   padding: 20px;
 }
+
+
 .tab-contents-item {
   display: none;
 }

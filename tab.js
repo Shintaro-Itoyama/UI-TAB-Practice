@@ -33,6 +33,8 @@
   const $nav = $tab.querySelectorAll("[data-nav]");
   console.log("$nav",$nav);
 
+  const NAV_LENG = $nav.length;
+  const ADD_CLASS = "is-active";
 
   //html側でタブコンテンツにデータ属性data-contを付与して、このJS側でその要素を取得する
   const $content = $tab.querySelectorAll("[data-cont]");
@@ -62,17 +64,17 @@
 
     //表示対象外のnav,contを全てリセットする。
     let index = 0;
-    while(index < $nav.length){
+    while(index < NAV_LENG){
       $content[index].style.display = "none";
       //is-activeがあったら排除する、。
-      $nav[index].classList.remove("is-active");
+      $nav[index].classList.remove(ADD_CLASS);
       index++;
     }
 
     //対象のコンテンツをアクティブ化する。
     $tab.querySelectorAll('[data-cont ="' + targetVal + '"]')[0].style.display = "block";
     //navの色変え(CSSで色を定義している、is-activeクラスをクリックされたnavのクラスに追加する。)
-    $nav[targetVal].classList.add("is-active");
+    $nav[targetVal].classList.add(ADD_CLASS);
 
 
 
@@ -82,7 +84,7 @@
   //タブナビにクリックイベントを追加する。クリックすると、handleClick関数が呼び出されるようになる。
   //$nav[0].addEventListener("click", (e) => handleClick(e) );
   let index = 0;
-  while( index < $nav.length ){
+  while( index < NAV_LENG ){
     $nav[index].addEventListener("click", (e) => handleClick(e) );
     index ++;
   }
